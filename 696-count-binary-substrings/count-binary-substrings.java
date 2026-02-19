@@ -1,0 +1,27 @@
+class Solution {
+
+    //Aryan
+    public int countBinarySubstrings(String s) {
+        int n = s.length();
+        int[] blocks = new int[n];
+        int idx = 0;
+        
+        int count = 1;
+        for (int i = 1; i < n; i++) {
+            if (s.charAt(i) == s.charAt(i - 1)) {
+                count++;
+            } else {
+                blocks[idx++] = count;
+                count = 1;
+            }
+        }
+        blocks[idx++] = count;
+        
+        int res = 0;
+        for (int i = 0; i < idx - 1; i++) {
+            res += Math.min(blocks[i], blocks[i + 1]);
+        }
+        
+        return res;
+    }
+}
