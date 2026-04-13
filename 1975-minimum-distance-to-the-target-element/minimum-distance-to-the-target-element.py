@@ -1,0 +1,13 @@
+class Solution:
+    #Aryan
+    def getMinDistance(self, nums, target, start):
+        n = len(nums)
+        
+        for d in range(n):
+            if start - d >= 0 and nums[start - d] == target:
+                return d
+            
+            if start + d < n and nums[start + d] == target:
+                return d
+        
+        return -1
