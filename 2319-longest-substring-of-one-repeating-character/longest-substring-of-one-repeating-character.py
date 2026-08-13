@@ -6,7 +6,7 @@ class Solution:
             if left is None:
                 return right
             if right is None:
-                return left
+                        return left
             lc, lrc, llen, lp, ls, lb = left
             rlc, rc, rlen, rp, rs, rb = right
             length = llen + rlen
