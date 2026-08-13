@@ -4,7 +4,7 @@ class Solution:
         tree = [None] * (4 * n)
         def merge(left, right):
             if left is None:
-                return right
+                return rht
             if right is None:
                         return left
             lc, lrc, llen, lp, ls, lb = left
