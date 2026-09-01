@@ -1,3 +1,3 @@
 class Solution:
     def findMin(self, nums: List[int]) -> int:
-        return min(nums)
+        return nums[bisect_left(nums, True, key=lambda n: n <= nums[-1])]
